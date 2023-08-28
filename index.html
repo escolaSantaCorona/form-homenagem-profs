@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <head>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+    </head>
+    <link rel="stylesheet" href="styles.css" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <div id="form-outer">
+      <img id="logo" src="./logo-escola.png" alt="logo" />
+      <h1 id="titulo">
+        Indicação de um(a) professor(a) para homenagem em 2023
+      </h1>
+
+      <p class="description">
+        No mês de outubro há uma data muito especial, o Dia dos
+        Professores. Para tornar essa ocasião ainda mais significativa, a SMED quer
+        celebrar o trabalho e dedicação de todos os professores que fazem parte
+        desta Rede Municipal de Ensino. Para este momento está sendo organizado uma
+        homenagem a um professor/educador de cada escola (EMEF e EEI) de forma que este
+        represente seus colegas nesta data especial.
+      </p>
+      <br>
+      <p class="description">
+        Convidamos você a indicar um de seus colegas professor(a),
+        de forma que todos se sintam representados e homenageados através dele(a).
+      </p>
+     
+      <br>
+      <ol style="margin-top:10px;margin-bottom:10px;">
+        <li style="text-align:left">
+         <strong>Com base nos indicadores abaixo:</strong> 
+          <br />
+          <br />
+          <ul style="line-height: 25px">
+            <li>Paixão pela educação;</li>
+            <li>
+              Comprometimento com a aprendizagem e o desenvolvimento das crianças/
+              dos estudantes,educando e cuidando; 
+            </li>
+            <li>Papel inspirador no ambiente escolar.</li>
+          </ul>
+        </li>
+       
+      </ol>
+      <form
+        action="https://sheetdb.io/api/v1/imq8ibzmvsnmv?sheet=escolha"
+        method="POST"
+        id="sheetdb-form"
+      >
+        <div class="rowTab">
+          <div class="labels">
+            <label style="text-align:left;" for="professor_escolhido"
+              >Escreva ao lado o nome do professor(a)/educador(a) ao qual você deseja indicar para a escolha:</label
+            >
+          </div>
+          <div class="rightTab">
+            <input
+              id="comments"
+              class="input-field"
+              style="height: 50px; resize: vertical"
+              name="data[professor_escolhido]"
+              required
+            ></input>
+          </div>
+        </div>
+        <button id="submit" type="submit">Clique aqui para registrar a resposta</button>
+      </form>
+    </div>
+  </body>
+  <script src="./script.js"></script>
+</html>
