@@ -8,13 +8,18 @@ document.addEventListener('DOMContentLoaded', function() {
         // Desativar o botão de enviar
         submitButton.disabled = true;
 
+        const professorEscolhido = document.getElementById('comments').value;
+
         fetch(form.action, {
             method: "POST",
-            body: new FormData(form),
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ professor_escolhido: professorEscolhido })
         })
         .then(response => response.json())
         .then(data => {
-            alert('FORMULÁRIO ENVIADO COM SUCESSO!!!');
+            alert(data.message);
             form.reset();
         })
         .catch(error => {
